@@ -423,8 +423,7 @@ class AddToHomeScreen {
 
   _genErrorMessage(container, title, body) {
     var containerInnerHTML =
-      this._genLogo() +
-      this._genModalStart() +
+      this._genModalStart() + this._genLogo() +
       `<div class="adhs-error-title">` + title + `</div>` +
       `<div class="adhs-error-body">` + body + `</div>` +
       `<button class="adhs-error-copy-link-button" onclick="AddToHomeScreen.copyToClipboard();" ontouchstart="AddToHomeScreen.copyToClipboard();">${i18n.__('Copy Website Link to Clipboard')}</button>` +
@@ -441,6 +440,10 @@ class AddToHomeScreen {
 
   _genTitle() {
     return this._genTitleWithMessage(i18n.__('Install the %s app to continue', this.appName));
+  }
+
+  _genErrorTitle() {
+    return this._genTitleWithMessage(i18n.__('Error: This browser is not supported'));
   }
 
   _genModalStart() {
@@ -477,8 +480,8 @@ class AddToHomeScreen {
 
   _genIOSSafari(container) {
     var containerInnerHTML =
-      this._genLogo() +
       this._genModalStart() +
+      this._genLogo() + 
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, i18n.__('Tap the %s button bellow.', `<img class="adhs-ios-safari-sharing-api-button" src="${this._genAssetUrl('ios-safari-sharing-api-button.svg')}" />`)) +
@@ -496,8 +499,8 @@ class AddToHomeScreen {
 
   _genIOSChrome(container) {
     var containerInnerHTML =
-      this._genLogo() +
       this._genModalStart() +
+      this._genLogo() + 
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, i18n.__('Tap the %s button in the upper right corner.', `<img class="adhs-ios-chrome-more-button" src="${this._genAssetUrl('ios-chrome-more-button.svg')}"/>`)) +
@@ -515,8 +518,8 @@ class AddToHomeScreen {
 
   _genIOSInAppBrowserOpenInSystemBrowser(container) {
     var containerInnerHTML =
-      this._genLogo() +
       this._genModalStart() +
+      this._genLogo() + 
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, i18n.__('Tap the %s button above.', `<img class="adhs-more-button" src="${this._genAssetUrl('generic-more-button.svg')}"/>`)) +
@@ -533,16 +536,13 @@ class AddToHomeScreen {
 
   _genIOSInAppBrowserOpenInSafariBrowser(container) {
     var containerInnerHTML =
-      this._genLogo() +
       this._genModalStart() +
-      this._genTitle() +
+      this._genLogo() + 
+      this._genErrorTitle() +
       this._genListStart() +
-      this._genListItem(`1`, i18n.__('Tap the %s button below to open your system browser.', `<img class="adhs-more-button" src="${this._genAssetUrl('openinsafari-button.png')}"/>`)) +
+      this._genListItem(`1`, i18n.__('browser not supported, no incognito or in-app browser')) +
       this._genListEnd() +
-      this._genModalEnd() +
-      `<div class="adhs-inappbrowser-openinsafari-bouncing-arrow-container">
-      <img src="` + this._genAssetUrl('generic-vertical-down-bouncing-arrow.svg') + `" alt="arrow" />
-    </div>`;
+      this._genModalEnd();
     container.innerHTML = containerInnerHTML;
     container.classList.add('adhs-ios');
     container.classList.add('adhs-inappbrowser-openinsafari');
@@ -550,8 +550,8 @@ class AddToHomeScreen {
 
   _genAndroidChrome(container) {
     var containerInnerHTML =
-      this._genLogo() +
       this._genModalStart() +
+      this._genLogo() + 
       this._genTitle() +
       this._genListStart() +
       this._genListItem(`1`, i18n.__('Tap the %s button in the browser bar.', `<img class="adhs-android-chrome-more-button" src="${this._genAssetUrl('android-chrome-more-button.svg')}"/>`)) +

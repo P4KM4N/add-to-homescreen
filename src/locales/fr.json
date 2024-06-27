@@ -7,6 +7,7 @@
   "Installing to your home screen is currently only supported on iOS and Android.": "L'installation sur votre écran d'accueil est actuellement uniquement prise en charge sur iOS et Android.",
   "Copy Website Link to Clipboard": "Copier le lien du site web dans le presse-papiers",
   "Install the %s app to continue": "Installez l'application %s pour continuer",
+  "Error: This browser is not supported": "Erreur : Ce navigateur n'est pas pris en charge",
   "Tap the %s button bellow.": "Appuyez sur le bouton %s ci-dessous",
   "Select %s from the menu that pops up.": "Sélectionnez %s dans le menu qui apparaît.",
   "You may need to scroll down to find this menu item.": "Vous devrez peut-être faire défiler vers le bas pour trouver cet élément de menu.",
@@ -19,5 +20,6 @@
   "Tap the %s button in the browser bar.": "Appuyez sur le bouton %s dans la barre du navigateur.",
   "Tap the %s or %s button.": "Appuyez sur le bouton %s ou %s.",
   "Link Copied to Clipboard!": "Lien copié dans le presse-papiers !",
-  "Failed to Copy to Clipboard! (Try Again from \"https://\" Link)": "Échec de la copie dans le presse-papiers ! (Réessayez à partir du lien \"https://\")"
+  "Failed to Copy to Clipboard! (Try Again from \"https://\" Link)": "Échec de la copie dans le presse-papiers ! (Réessayez à partir du lien \"https://\")",
+  "browser not supported, no incognito or in-app browser": "Ouvrez le site Web dans votre navigateur système et assurez-vous de ne pas être en mode Incognito/Privé et pas à l'intérieur d'un navigateur intégré à une application."
 }
